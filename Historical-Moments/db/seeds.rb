@@ -15,7 +15,6 @@ date_of_event = Date.new(1941, 12, 7)
 event1 = Event.create(name: "Pearl Harbor", date: date_of_event, HistoricalMoment_id: historicalMoment1.id)
 #locations
 Location.create(name: "Pearl Harbor, Oahu, Hawaii", event_id: event1.id, actor_id: actor1.id)
-Location.create(name: "Pearl Harbor, Oahu, Hawaii", event_id: event1.id, actor_id: actor2.id)
 
 #actors
 actor1_birth_year = Date.new(1941, 12, 7)
@@ -27,7 +26,6 @@ actor2 = Actor.create(name: "Franklin D. Roosevelt", death_year: actor2_birth_ye
 
 
 #Historical Moment: War Of Indpendence
-HistoricalMoment.create("World War 2", "17", "1945")
+HistoricalMoment.create(name: "U.S. War of Independence", start_date: 04-17-1776, end_date: 09-03-1783)
 #events
-
 
