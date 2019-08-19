@@ -4,4 +4,8 @@ class HistoricalMomentsController < ApplicationController
         @historicalMoments = HistoricalMoment.all
     end
 
+    def show 
+        @historicalMoment = HistoricalMoment.find(params[:id])
+    end 
+
 end
