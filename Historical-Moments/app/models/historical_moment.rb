@@ -1,0 +1,2 @@
+class HistoricalMoment < ApplicationRecord
+end
