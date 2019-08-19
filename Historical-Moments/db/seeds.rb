@@ -13,7 +13,7 @@ historicalMoment1 = HistoricalMoment.create(name: "World War 2", start_date: sta
 #events
 date_of_event1 = Date.new(1941, 12, 7)
 description1 = "World War II, also known as the Second World War, was a global war that lasted from 1939 to 1945. The vast majority of the world's countries—including all the great powers—eventually formed two opposing military alliances: the Allies and the Axis."
-event1 = Event.create(name: "Pearl Harbor", description: description1, img_url: "https://nationalinterest.org/sites/default/files/styles/desktop__1260_/public/main_images/image-2018-08-03%20%282%29.jpg?itok=pn65Xnf5", event_date: date_of_event1, historical_moment_id: historicalMoment1.id)
+event1 = Event.create(name: "Pearl Harbor", description: description1, img_url: "https://cdn.britannica.com/s:500x350/19/192919-049-61E0CA86.jpg", event_date: date_of_event1, historical_moment_id: historicalMoment1.id)
 
 
 
@@ -38,14 +38,14 @@ Location.create(name: "Pearl Harbor, Oahu, Hawaii", event_id: event1.id, actor_i
 
 
 woi = HistoricalMoment.create(name: "U.S. War of Independence", start_date: Date.new(1775, 04, 17), end_date: Date.new(1783, 9, 03))
-yorktown = Event.create(name: "Siege of Yorktown", description: "Siege", img_url: "https://en.wikipedia.org/wiki/Siege_of_Yorktown#/media/File:Surrender_of_Lord_Cornwallis.jpg", event_date: Date.new(1781, 10, 19), historical_moment_id: woi.id)
+yorktown = Event.create(name: "Siege of Yorktown", description: "Siege", img_url: "https://www.britishbattles.com/wp-content/uploads/2018/05/american-continental-troops-capture-guns-560.jpg", event_date: Date.new(1781, 10, 19), historical_moment_id: woi.id)
 
 
 alex = Actor.create(name: "Alexander Hamilton", birth_date: Date.new(1755, 1, 11), death_date: Date.new(1804, 7, 12), bio: "First Secretary of the Treasury", img_url: "https://i.guim.co.uk/img/media/315f74b188ed4812d260916f377a9ae73d6d2ee9/0_119_3696_2219/master/3696.jpg?width=300&quality=85&auto=format&fit=max&s=38f3f26ff346da0d19331972feea23c2", title: "Hero")
 
 gw  = Actor.create(name: "George Washington", birth_date: (Date.new(1732, 2, 22)), death_date: (Date.new(1799, 12, 14)), bio: "General and President", img_url: "https://en.wikipedia.org/wiki/George_Washington#/media/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg", title: "General")
 
-valley_forge = Event.create(name: "Winter at Valley Forge", description: "Major Bummer", img_url: "https://en.wikipedia.org/wiki/Valley_Forge#/media/File:Washington_and_Lafayette_at_Valley_Forge.jpg", event_date: (Date.new(1777, 12, 19)), historical_moment_id: woi.id)
+valley_forge = Event.create(name: "Winter at Valley Forge", description: "Major Bummer", img_url: "https://cdn.britannica.com/s:500x350/59/121659-004-AF5A80C7.jpg", event_date: (Date.new(1777, 12, 19)), historical_moment_id: woi.id)
 Location.create(event_id: yorktown.id, actor_id: alex.id, name: "Yorktown, VA")
 Location.create(event_id: yorktown.id, actor_id: gw.id, name: "Yorktown, VA")
 
