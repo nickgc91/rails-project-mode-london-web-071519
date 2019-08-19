@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get "/documents/new", to: "documents#new", as: "new_document"
   get "/documents/:id", to: "documents#show", as: "document"
   post "/documents", to: "documents#create"
-  get "/documents/:id/edit", to: "documents#edit"
+  get "/documents/:id/edit", to: "documents#edit", as: "edit_document"
   patch "/documents/:id", to: "documents#update"
   delete "/documents/:id", to: "documents#destroy"
 

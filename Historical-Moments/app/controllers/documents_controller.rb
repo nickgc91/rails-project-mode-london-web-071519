@@ -5,7 +5,7 @@ class DocumentsController < ApplicationController
     end 
 
     def new
-        @doc = Document.new
+        @document = Document.new
     end 
 
     def show
@@ -14,13 +14,22 @@ class DocumentsController < ApplicationController
 
     def create
         @doc = Document.create(doc_params)
-        redirect_to documents_path
+        redirect_to document_path(@doc)
+    end 
+
+    def edit
+        @document = Document.find(params[:id])
     end 
 
     def update
+        @document = Document.find(params[:id])
+        @document.update(doc_params)
+        redirect_to document_path(@document)
     end 
 
     def destroy
+        @document = Document.find(params[:id]).destroy 
+        redirect_to documents_path
     end 
 
     private 
