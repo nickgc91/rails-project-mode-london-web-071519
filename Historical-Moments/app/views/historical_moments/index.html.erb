@@ -8,3 +8,6 @@ End date: <%= moment.end_date %> <br>
 <% end %>
 </h3>
 
+<%= form_tag new_historical_moment_path, method: :get do %>
+ <%= submit_tag "Create Historical Moment" %>
+<% end %>
