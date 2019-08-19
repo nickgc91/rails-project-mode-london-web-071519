@@ -1,1 +1,7 @@
-<h1> <%= @events..name %>'s Events</h1>
+<h1> <%= @events.second.historical_moment.name %>'s Events</h1>
+
+<h3>
+<% @events.each do |event| %>
+<%= link_to event.name, event_path(event) %> <br>
+<% end %>
+</h3>

@@ -1,0 +1,8 @@
+<h1> <%= @historicalMoment.name %> </h1>
+
+
+<h3>
+<% @historicalMoment.events.each do |event| %>
+Event: <%= link_to event.name, event_path(event) %> <br>
+<% end %>
+</h3>
