@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_19_113540) do
+ActiveRecord::Schema.define(version: 2019_08_19_133603) do
 
   create_table "actors", force: :cascade do |t|
     t.string "name"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_113540) do
     t.string "text"
     t.date "creation_date"
     t.string "author"
-    t.integer "moment_id"
+    t.integer "historical_moment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
