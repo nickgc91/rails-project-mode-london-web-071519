@@ -35,3 +35,7 @@ Location.create(name: "Pearl Harbor, Oahu, Hawaii", event_id: event1.id, actor_i
 #Historical Moment: War Of Indpendence
 # HistoricalMoment.create("World War 2", "17", "1945")
 
+Actor.create(name: George Washington, birth_date: Date.new(1732, 2, 22), death_date: Date.new(1799, 12, 14), bio: "General and President", img_url: "https://en.wikipedia.org/wiki/George_Washington#/media/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg", title: "General")
+HistoricalMoment.create(name: "U.S. War of Independence", start_date: Date.new(1775, 04, 17), end_date: Date.new(1783, 9, 03))
+Event.create(name: "Siege of Yorktown", description: "Siege", img_url: "https://en.wikipedia.org/wiki/Siege_of_Yorktown#/media/File:Surrender_of_Lord_Cornwallis.jpg", event_date: Date.new(1781, 10, 19), moment_id: 3)
+Location.create(event_id: 1, actor_id: 1, name: "Yorktown, VA")

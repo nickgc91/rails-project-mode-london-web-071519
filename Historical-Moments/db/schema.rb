@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_19_105715) do
+ActiveRecord::Schema.define(version: 2019_08_19_113540) do
 
   create_table "actors", force: :cascade do |t|
     t.string "name"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_105715) do
     t.string "description"
     t.string "img_url"
     t.date "event_date"
-    t.integer "moment_id"
+    t.integer "historical_moment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
