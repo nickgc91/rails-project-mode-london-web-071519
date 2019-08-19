@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  img_url: MyString
+  year: 2019-08-19
+  moment_id: 1
+
+two:
+  name: MyString
+  description: MyString
+  img_url: MyString
+  year: 2019-08-19
+  moment_id: 1
