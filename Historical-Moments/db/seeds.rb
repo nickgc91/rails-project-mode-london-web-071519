@@ -35,7 +35,22 @@ Location.create(name: "Pearl Harbor, Oahu, Hawaii", event_id: event1.id, actor_i
 #Historical Moment: War Of Indpendence
 # HistoricalMoment.create("World War 2", "17", "1945")
 
-Actor.create(name: George Washington, birth_date: Date.new(1732, 2, 22), death_date: Date.new(1799, 12, 14), bio: "General and President", img_url: "https://en.wikipedia.org/wiki/George_Washington#/media/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg", title: "General")
+
 HistoricalMoment.create(name: "U.S. War of Independence", start_date: Date.new(1775, 04, 17), end_date: Date.new(1783, 9, 03))
 Event.create(name: "Siege of Yorktown", description: "Siege", img_url: "https://en.wikipedia.org/wiki/Siege_of_Yorktown#/media/File:Surrender_of_Lord_Cornwallis.jpg", event_date: Date.new(1781, 10, 19), moment_id: 3)
 Location.create(event_id: 1, actor_id: 1, name: "Yorktown, VA")
+
+Actor.create(name: "Alexander Hamilton", birth_date: (Date.new 1755, 1, 11), death_date: (Date.new(1804, 7, 12)), bio: "First Secretary of the Treasury", img_url: "https://i.guim.co.uk/img/media/315f74b188ed4812d260916f377a9ae73d6d2ee9/0_119_3696_2219/master/3696.jpg?width=300&quality=85&auto=format&fit=max&s=38f3f26ff346da0d19331972feea23c2", title: "Hero")
+
+Actor.create(name: "George Washington", birth_date: (Date.new(1732, 2, 22)), death_date: (Date.new(1799), 12, 14), bio: "General and President", img_url: "https://en.wikipedia.org/wiki/George_Washington#/media/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg", title: "General")
+
+Event.create(name: "Winter at Valley Forge", description: "Major Bummer", img_url: "https://en.wikipedia.org/wiki/Valley_Forge#/media/File:Washington_and_Lafayette_at_Valley_Forge.jpg", event_date: (Date.new(1777, 12, 19)), moment_id: 3)
+
+Location.create(event_id: 1, actor_id: 2, name: "Yorktown, VA")
+
+Location.create(event_id: 2, actor_id: 1, name: "Yorktown, VA")
+Location.create(event_id: 2, actor_id: 2, name: "Yorktown, VA")
+
+Document.create(title: "The Declaration of Independence", creation_date: (Date.new(1776, 7, 4)), author: "Thomas Jefferson", text: "https://www.archives.gov/founding-docs/declaration-transcript" moment_id: 3)
+
+Document.create(title: , creation_date: , author: , text: )
