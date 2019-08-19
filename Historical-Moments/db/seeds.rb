@@ -66,3 +66,4 @@ Location.create(event_id: senecca_falls.id, actor_id: ecs.id, name: "Seneca Fall
 Document.new(title: "Declaration of Sentiments", text: "https://www.britannica.com/event/Declaration-of-Sentiments", creation_date: (Date.new(1848, 7, 19)))
 
 Document.new(title: "U.S. vs Susan B. Anthony", text: "https://pdfs.semanticscholar.org/3951/772fe53ce256d045cf203b920293fa95106d.pdf", creation_date: (Date.new( 1873, 6, 17)), author: "Susan B. Anthony", historical_moment_id: womans_suffrage.id)
+

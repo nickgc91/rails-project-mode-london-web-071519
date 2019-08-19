@@ -1,0 +1,15 @@
+<h1>Create a New Document</h1>
+<%= form_for(@doc) do |f| %> 
+<%= f.label :title %>
+<%= f.text_field :title %> <br>
+<%= f.label :text %>
+<%= f.text_field :text %> <br>
+<%= f.label :creation_date %>
+<%= f.date_field :creation_date %> <br>
+<%= f.label :author %>
+<%= f.text_field :author %> <br>
+<%= f.collection_select :historical_moment_id, HistoricalMoment.all, :id, :name %>
+<%= f.submit %>
+<% end %> 
+
+
