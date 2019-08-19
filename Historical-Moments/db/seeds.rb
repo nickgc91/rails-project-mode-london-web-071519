@@ -16,6 +16,7 @@ description1 = "World War II, also known as the Second World War, was a global w
 event1 = Event.create(name: "Pearl Harbor", description: description1, img_url: "https://nationalinterest.org/sites/default/files/styles/desktop__1260_/public/main_images/image-2018-08-03%20%282%29.jpg?itok=pn65Xnf5", event_date: date_of_event1, moment_id: historicalMoment1.id)
 
 
+
 #actors
 actor1_birth_year = Date.new(1941, 12, 7)
 actor1_death_year = Date.new(1921, 12, 7)
@@ -33,6 +34,4 @@ Location.create(name: "Pearl Harbor, Oahu, Hawaii", event_id: event1.id, actor_i
 
 #Historical Moment: War Of Indpendence
 # HistoricalMoment.create("World War 2", "17", "1945")
-#events
-
 
