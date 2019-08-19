@@ -1,0 +1,10 @@
+<h1> Historical Moments </h1>
+
+<h3>
+<% @historicalMoments.each do |moment| %>
+Moment: <%= link_to moment.name, historical_moment_path(moment) %> <br>
+Start date: <%= moment.start_date %> <br>
+End date: <%= moment.end_date %> <br>
+<% end %>
+</h3>
+
