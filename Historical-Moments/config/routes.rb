@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/events', to: 'events#index', as: 'events'
   get '/events/new', to: 'events#new', as: 'new_event'
   post '/events', to: 'events#create'
-  get '/events/:id', to: 'events#show', as: 'event'
+  get '/events/:id', to: 'events#show', as: "event"
   get '/events/:id/edit', to: 'events#edit', as: 'edit_event'
   patch '/events/:id', to: 'events#update'
   delete '/events/:id', to: 'events#destroy'
@@ -28,5 +28,15 @@ Rails.application.routes.draw do
   get "/documents/:id/edit", to: "documents#edit", as: "edit_document"
   patch "/documents/:id", to: "documents#update"
   delete "/documents/:id", to: "documents#destroy"
+
+   #actors
+
+   get "/actors", to: "actors#index", as: "actors"
+   get "/actors/new", to: "actors#new", as: "new_actor"
+   get "/actors/:id", to: "actors#show", as: "actor"
+   post "/actors", to: "actors#create"
+   get "/actors/:id/edit", to: "actors#edit", as: "edit_actor"
+   patch "/actors/:id", to: "actors#update"
+   delete "/actors/:id", to: "actors#destroy"
 
 end

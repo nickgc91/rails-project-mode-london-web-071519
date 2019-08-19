@@ -1,0 +1,11 @@
+<h1> <%= @actor.name %> </h1>
+Date of Birth: <%= @actor.birth_date %> <br>
+Date of Death: <%= @actor.death_date %> <br>
+Bio: <%= @actor.bio %> <br>
+Title: <%= @actor.title %> <br>
+<% @actor.events.each do |event| %> 
+    Participated In: <%= link_to event.name, event_path(event) %> <br>
+    <% end %><br>
+    <img src= <%= @actor.img_url %> >
+   
+  

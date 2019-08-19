@@ -2,6 +2,7 @@
 link: <%= @document.text %> <br>
 <%= @document.creation_date %> <br>
 <%= @document.author %> <br>
-<%= link_to "Edit", edit_document_path(@document)%>
+<%= @document.historical_moment.name %> <br>
+<%= link_to "Edit", edit_document_path(@document)%> ||
 <%= link_to "Delete", document_path(@document), method: :delete %>
 

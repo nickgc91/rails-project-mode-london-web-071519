@@ -1,0 +1,17 @@
+<h1>Create a New Actor</h1>
+<%= form_for(@actor) do |f| %> 
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+<%= f.label :birth_date%>
+<%= f.date_field :birth_date %> <br>
+<%= f.label :death_date %>
+<%= f.date_field :death_date %> <br>
+<%= f.label :bio %>
+<%= f.text_field :bio %> <br>
+<%= f.label :img_url %>
+<%= f.text_field :img_url %> <br>
+<%= f.label :title %>
+<%= f.text_field :title %> <br>
+<%= f.submit %>
+<% end %> 
+

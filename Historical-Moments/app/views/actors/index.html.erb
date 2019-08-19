@@ -1,0 +1,4 @@
+<h1>Noteworthy Historical Actors </h1>
+<% @actors.each do |actor| %> <br>
+    <%= link_to actor.name, actor_path(actor) %>
+<% end %> 
