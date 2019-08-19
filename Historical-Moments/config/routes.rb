@@ -19,4 +19,14 @@ Rails.application.routes.draw do
   patch '/events/:id', to: 'events#update'
   delete '/events/:id', to: 'events#destroy'
 
+  #documents
+
+  get "/documents", to: "documents#index", as: "documents"
+  get "/documents/new", to: "documents#new", as: "new_document"
+  get "/documents/:id", to: "documents#show", as: "document"
+  post "/documents", to: "documents#create"
+  get "/documents/:id/edit", to: "documents#edit"
+  patch "/documents/:id", to: "documents#update"
+  delete "/documents/:id", to: "documents#destroy"
+
 end

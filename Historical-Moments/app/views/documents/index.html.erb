@@ -1,0 +1,5 @@
+<h1>Historical Documents</h1>
+<% @documents.each do |doc| %> 
+    <%= link_to doc.title, document_path(doc) %> <br>
+    <% end %>
+
