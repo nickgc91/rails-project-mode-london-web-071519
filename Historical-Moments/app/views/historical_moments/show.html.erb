@@ -1,11 +1,26 @@
 <h1> <%= @historicalMoment.name %> </h1>
 
 
-<h3> Events: <br>
+<h3> Events: </h3> 
+<ul>
 <% @historicalMoment.events.each do |event| %>
-<%= link_to event.name, event_path(event) %> <br>
+<li> <%= link_to event.name, event_path(event) %> </li>  <br>
 <% end %>
-</h3>
+</ul>
+
+<h3> Actors: </h3> 
+<ul>
+<% @historicalMoment.actors.each do |actor| %>
+<li> <%= link_to actor.name, actor_path(actor) %> </li>  <br>
+<% end %>
+</ul>
+
+<h3> Documents: </h3> 
+<ul>
+<% @historicalMoment.documents.each do |document| %>
+<li> <%= link_to document.title, document_path(document) %> </li>  <br>
+<% end %>
+</ul>
 
 <%= form_tag new_event_path, method: :get do %>
  <%= submit_tag "Create Historical Event" %>
