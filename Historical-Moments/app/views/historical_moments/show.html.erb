@@ -4,21 +4,21 @@
 <h3> Events: </h3> 
 <ul>
 <% @historicalMoment.events.each do |event| %>
-<li> <%= link_to event.name, event_path(event) %> </li>  <br>
+<li> <%= link_to event.name, event_path(event) %> </li>
 <% end %>
 </ul>
 
 <h3> Actors: </h3> 
 <ul>
 <% @historicalMoment.actors.each do |actor| %>
-<li> <%= link_to actor.name, actor_path(actor) %> </li>  <br>
+<li> <%= link_to actor.name, actor_path(actor) %> </li> 
 <% end %>
 </ul>
 
 <h3> Documents: </h3> 
 <ul>
 <% @historicalMoment.documents.each do |document| %>
-<li> <%= link_to document.title, document_path(document) %> </li>  <br>
+<li> <%= link_to document.title, document_path(document) %> </li> 
 <% end %>
 </ul>
 
