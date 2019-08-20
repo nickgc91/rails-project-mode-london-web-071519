@@ -15,8 +15,6 @@ date_of_event1 = Date.new(1941, 12, 7)
 description1 = "World War II, also known as the Second World War, was a global war that lasted from 1939 to 1945. The vast majority of the world's countries—including all the great powers—eventually formed two opposing military alliances: the Allies and the Axis."
 event1 = Event.create(name: "Pearl Harbor", description: description1, img_url: "https://cdn.britannica.com/s:500x350/19/192919-049-61E0CA86.jpg", event_date: date_of_event1, historical_moment_id: historicalMoment1.id)
 
-
-
 #actors
 actor1_birth_year = Date.new(1941, 12, 7)
 actor1_death_year = Date.new(1921, 12, 7)
@@ -40,7 +38,6 @@ Location.create(name: "Pearl Harbor, Oahu, Hawaii", event_id: event1.id, actor_i
 woi = HistoricalMoment.create(name: "U.S. War of Independence", start_date: Date.new(1775, 04, 17), end_date: Date.new(1783, 9, 03))
 yorktown = Event.create(name: "Siege of Yorktown", description: "Siege", img_url: "https://www.britishbattles.com/wp-content/uploads/2018/05/american-continental-troops-capture-guns-560.jpg", event_date: Date.new(1781, 10, 19), historical_moment_id: woi.id)
 
-
 alex = Actor.create(name: "Alexander Hamilton", birth_date: Date.new(1755, 1, 11), death_date: Date.new(1804, 7, 12), bio: "First Secretary of the Treasury", img_url: "https://i.guim.co.uk/img/media/315f74b188ed4812d260916f377a9ae73d6d2ee9/0_119_3696_2219/master/3696.jpg?width=300&quality=85&auto=format&fit=max&s=38f3f26ff346da0d19331972feea23c2", title: "Hero")
 
 gw  = Actor.create(name: "George Washington", birth_date: (Date.new(1732, 2, 22)), death_date: (Date.new(1799, 12, 14)), bio: "General and President", img_url: "https://en.wikipedia.org/wiki/George_Washington#/media/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg", title: "General")
@@ -62,8 +59,12 @@ ecs = Actor.create(name: "Elizabeth Cady Stanton", birth_date: Date.new(1815, 11
 senecca_falls = Event.create(name: "Seneca Falls Convention", description: "The Seneca Falls Convention was the first women's rights convention. It advertised itself as 'a convention to discuss the social, civil, and religious condition and rights of woman'. Held in the Wesleyan Chapel of the town of Seneca Falls, New York, it spanned two days over July 19–20, 1848. Attracting widespread attention, it was soon followed by other women's rights conventions, including the Rochester Women's Rights Convention in Rochester, New York, two weeks later. In 1850 the first in a series of annual National Women's Rights Conventions met in Worcester, Massachusetts.", img_url: "https://www.c4women.org/wp-content/uploads/2018/07/0365e4e9855679b8aa7161333eb87199.png", event_date: (Date.new(1848, 7, 19)), historical_moment_id: womans_suffrage.id)
 Location.create(event_id: senecca_falls.id, actor_id: sba.id, name: "Seneca Falls")
 Location.create(event_id: senecca_falls.id, actor_id: ecs.id, name: "Seneca Falls")
+lm = Actor.create(name: "Lucrecia Mott", birth_date: Date.new(1793, 1, 3), death_date: Date.new(1880, 11, 11), bio: "Lucretia Mott (née Coffin) was a U.S. Quaker, abolitionist, women's rights activist, and social reformer. She had formed the idea of reforming the position of women in society when she was amongst the women excluded from the World Anti-Slavery Convention in 1840. In 1848 she was invited by Jane Hunt to a meeting that led to the first meeting about women's rights. Mott helped write the Declaration of Sentiments during the 1848 Seneca Falls Convention." img_url: "https://en.wikipedia.org/wiki/Lucretia_Mott#/media/File:Mott_Lucretia_Painting_Kyle_1841.jpg" title: "Superhero")
+Location.create(event_id: senecca_falls.id, actor_id: lm.id, name: "Seneca Falls")
+fd = Actor.create(name: "Frederick Douglas", birth_date: Date.new(1818, 1, 1) death_date: Date.new(1895, 2, 20) img_url: "https://en.wikipedia.org/wiki/Seneca_Falls_Convention#/media/File:Frederick_Douglass_(1840s).jpg", title: "Orator and Activist")
+Location.create(event_id: senecca_falls.id, actor_id: fd.id, name: "Seneca Falls")
 
 Document.new(title: "Declaration of Sentiments", text: "https://www.britannica.com/event/Declaration-of-Sentiments", creation_date: (Date.new(1848, 7, 19)))
-
 Document.new(title: "U.S. vs Susan B. Anthony", text: "https://pdfs.semanticscholar.org/3951/772fe53ce256d045cf203b920293fa95106d.pdf", creation_date: (Date.new( 1873, 6, 17)), author: "Susan B. Anthony", historical_moment_id: womans_suffrage.id)
 
+uscw = HistoricalMoment.create(name: "U.S. Civil War", start_date: Date.new(1861, 4, 12) end_date: Date.new(1865, 5, 9)) 
