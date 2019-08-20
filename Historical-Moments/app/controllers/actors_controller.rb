@@ -32,4 +32,8 @@ class ActorsController < ApplicationController
         redirect_to actors_path
     end 
 
+    def actor_params
+        params.require(:actor).permit(:name, :birth_date, :death_date, :bio, :img_url, :title)
+    end 
+
 end

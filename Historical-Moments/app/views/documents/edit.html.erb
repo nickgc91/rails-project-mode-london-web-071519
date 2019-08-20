@@ -1,5 +1,5 @@
 <h1>Edit Document</h1>
-<%= form_for(@document) do |f| %> 
+<h3><%= form_for(@document) do |f| %> 
 <%= f.label :title %>
 <%= f.text_field :title %> <br>
 <%= f.label :text %>
@@ -10,4 +10,4 @@
 <%= f.text_field :author %> <br>
 <%= f.collection_select :historical_moment_id, HistoricalMoment.all, :id, :name %>
 <%= f.submit %>
-<% end %> 
+<% end %> </h3>
