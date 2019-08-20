@@ -1,8 +1,12 @@
-<style> body {background-color: #e01010; } </style>
-<h1>Moments In Time</h1>
-<h2>Discover History Moments Through The Ages</h2> <br>
-<h3>Login --> </h3
-><%= form_tag sessions_path do %>
+
+<body style="text-align:center;" background ="https://theteachersdigest.com/wp-content/uploads/2014/07/History.png"> 
+<font color="white">
+
+<h1 >Moments In Time</h1>
+<h2 >Discover History Moments Through The Ages</h2>
+<h3 >Login</h3>
+
+  <%= form_tag sessions_path do %>
     <%= label :user, :username %>
     <%= text_field :user, :username %>
      <%= label :user, :password %>
@@ -14,6 +18,4 @@
  <%= submit_tag "Create New User" %>
 <% end %>
 
-
-<img src= <%= "https://theteachersdigest.com/wp-content/uploads/2014/07/History.png" %> alt="">
 
