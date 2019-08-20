@@ -12,6 +12,9 @@
 <% end %>
 <br>
 
+<%= form_tag edit_historical_moment_path, method: :get do %>
+<%= submit_tag "Update Historical Moment" %>
+<% end %> <br>
 <%= form_tag historical_moment_path(@historicalMoment), method: :delete do %>
  <%= submit_tag "Delete Historical Moment", data: { confirm: 'Are you sure?' } %>
 <% end %>
