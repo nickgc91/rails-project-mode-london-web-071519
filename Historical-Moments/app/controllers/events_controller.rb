@@ -23,9 +23,9 @@ class EventsController < ApplicationController
     end
 
     def update 
-        @event = Event.update(event_params)
-        @event.save
-
+        @event = Event.find(params[:id])
+        @event.update(event_params)
+        
         redirect_to event_path(@event)
     end 
 
@@ -38,7 +38,7 @@ class EventsController < ApplicationController
     private 
 
     def event_params
-        params.require(:event).permit(:name, :description, :img_url, :event_date, :moment_id)
+        params.require(:event).permit(:name, :description, :img_url, :event_date, :historical_moment_id)
     end
 
 end

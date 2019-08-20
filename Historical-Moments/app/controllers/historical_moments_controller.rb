@@ -23,8 +23,8 @@ class HistoricalMomentsController < ApplicationController
     end
 
     def update 
-        @historicalMoment = HistoricalMoment.update(historical_moment_params)
-        @historicalMoment.save
+        @historicalMoment = HistoricalMoment.find(params[:id])
+        @historicalMoment.update(historical_moment_params)
 
         redirect_to historical_moment_path(@historicalMoment)
     end 
@@ -38,7 +38,7 @@ class HistoricalMomentsController < ApplicationController
     private 
 
     def historical_moment_params
-        params.require(:historical_moment).permit(:name, :description, :img_url, :event_date, :moment_id)
+        params.require(:historical_moment).permit(:name, :start_date, :end_date)
     end
 
 end
