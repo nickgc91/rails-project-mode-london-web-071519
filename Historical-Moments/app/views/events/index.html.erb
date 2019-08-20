@@ -5,3 +5,7 @@
 <%= link_to event.name, event_path(event) %> <br>
 <% end %>
 </h3>
+
+<%= form_tag new_event_path, method: :get do %>
+ <%= submit_tag "Create Historical Event" %>
+<% end %>

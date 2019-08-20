@@ -7,8 +7,12 @@
 <% end %>
 </h3>
 
+<%= form_tag new_event_path, method: :get do %>
+ <%= submit_tag "Create Historical Event" %>
+<% end %>
+<br>
 
 <%= form_tag historical_moment_path(@historicalMoment), method: :delete do %>
- <%= submit_tag "Delete Historical Moment" %>
+ <%= submit_tag "Delete Historical Moment", data: { confirm: 'Are you sure?' } %>
 <% end %>
 
