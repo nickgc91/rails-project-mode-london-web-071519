@@ -12,7 +12,8 @@
   <body>
 
   <h3> <%= link_to "Hist. Moments", historical_moments_path %>  &nbsp <%= link_to "Hist. Events", events_path %>
-  &nbsp <%= link_to "Hist. Actors", actors_path %> &nbsp <%= link_to "Hist. Docs", documents_path %></h3>
+  &nbsp <%= link_to "Hist. Actors", actors_path %> &nbsp <%= link_to "Hist. Docs", documents_path %>
+  <%= link_to "Link Actors and Events", new_location_path %></h3>
     <%= yield %>
   </body>
 </html>
