@@ -1,7 +1,19 @@
 <h1>The event: <%= @event.name %> </h1>
-<h3>When it took place: <%= @event.event_date %> </h3>
+<h4>When it took place:</h4> <%= @event.event_date %> 
+
+<h4>What happend here? </h4> <%= @event.description %> 
+
+<h4> Main actors: </h4>
+<ul>
+<% @event.actors.each do |actor| %>
+<li><%= actor.name %> </li>
+<% end %>  
+</ul>
+
+<%= form_tag new_actor_path, method: :get do %>
+<%= submit_tag "Add Actor To Event" %>
+<% end %>
 <br>
-<h3>What happend here? <br><br> <%= @event.description %> </h3>
 
 <img src= <%=@event.img_url %> alt="">
 <br><br>

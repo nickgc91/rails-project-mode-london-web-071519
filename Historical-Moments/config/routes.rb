@@ -39,4 +39,8 @@ Rails.application.routes.draw do
    patch "/actors/:id", to: "actors#update"
    delete "/actors/:id", to: "actors#destroy"
 
+   #locations
+   get "/locations/new", to: "locations#new", as: "new_location"
+   post "/locations/", to: "locations#create"
+
 end
