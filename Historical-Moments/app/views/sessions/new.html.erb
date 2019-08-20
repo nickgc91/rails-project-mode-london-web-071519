@@ -2,6 +2,10 @@
 <body style="text-align:center;" background ="https://theteachersdigest.com/wp-content/uploads/2014/07/History.png"> 
 <font color="white">
 
+  <% if flash[:notice] %>
+  <h3> <%= flash[:notice] %> </h3>
+  <% end %>
+
 <h1 >Moments In Time</h1>
 <h2 >Discover History Moments Through The Ages</h2>
 <h3 >Login</h3>
@@ -10,7 +14,7 @@
     <%= label :user, :username %>
     <%= text_field :user, :username %>
      <%= label :user, :password %>
-    <%= text_field :user, :password %>
+    <%= password_field :user, :password %>
     <%= submit_tag(value="Login") %>
 <% end %> <br>
 <h3> Or Create New User --> </h3>
