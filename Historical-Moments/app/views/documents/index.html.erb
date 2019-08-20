@@ -1,5 +1,9 @@
 <h1>Historical Documents</h1>
-<% @documents.each do |doc| %> 
-    <%= link_to doc.title, document_path(doc) %> <br>
-    <% end %>
+<h3> <% @documents.each do |doc| %> 
+    <%= link_to doc.title, document_path(doc) %>  <br>
+    <% end %></h3>
+
+    <%= form_tag new_document_path, method: :get do %>
+        <%= submit_tag "Create New Document" %>
+       <% end %>
 
