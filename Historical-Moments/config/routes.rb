@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   post '/sessions', to: "sessions#create", as: "sessions"
   delete '/sessions', to: "sessions#destroy"
 
+  #users
+  get '/users/new', to: 'users#new', as: 'new_user'
+  post '/users', to: 'users#create'
+
   #historicalmoments
   get '/historicalmoments', to: 'historical_moments#index', as: 'historical_moments'
   get '/historicalmoments/new', to: 'historical_moments#new', as: 'new_historical_moment'
