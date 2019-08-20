@@ -1,8 +1,8 @@
 <h1><%= @document.title %></h1>
-link: <%= @document.text %> <br>
-<%= @document.creation_date %> <br>
+<%= @document.text %> <br>
+<h3><%= @document.creation_date %> <br>
 <%= @document.author %> <br>
 <%= @document.historical_moment.name %> <br>
 <%= link_to "Edit", edit_document_path(@document)%> ||
-<%= link_to "Delete", document_path(@document), method: :delete %>
+<%= link_to "Delete", document_path(@document), method: :delete %> </h3>
 
