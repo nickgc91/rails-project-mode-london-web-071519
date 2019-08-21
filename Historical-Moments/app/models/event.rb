@@ -18,4 +18,18 @@ class Event < ApplicationRecord
         end
     end
 
+    #earlierst occuring event
+    def self.earliest_occuring_event
+        event = Event.all.min_by do |event|
+            event.event_date
+        end
+    end
+
+    #most recent event
+    def self.most_recent_event
+        event = Event.all.max_by do |event|
+            event.event_date
+        end
+    end
+
 end
