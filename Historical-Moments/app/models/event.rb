@@ -5,12 +5,15 @@ class Event < ApplicationRecord
 
 
      #analytics methods for Actor
+
+    #provides the total amount of events
     def self.total_events
         Event.all.count
     end
 
+    #event with most actors
     def self.event_with_most_actors
-        Event.all.max_by do |event|
+        event = Event.all.max_by do |event|
             event.actors.count
         end
     end
