@@ -6,8 +6,8 @@ Moment: <%= link_to moment.name, historical_moment_path(moment) %> <br>
 Start date: <%= moment.start_date %> <br>
 End date: <%= moment.end_date %> <br>
 <% end %>
-</h3>
+<br>
 
-<%= form_tag new_historical_moment_path, method: :get do %>
- <%= submit_tag "Create Historical Moment" %>
-<% end %>
+<%= link_to "Create Historical Event", new_historical_moment_path %>
+
+</h3>

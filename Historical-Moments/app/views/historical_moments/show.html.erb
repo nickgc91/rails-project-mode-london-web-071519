@@ -21,16 +21,12 @@
 <li> <%= link_to document.title, document_path(document) %> </li> 
 <% end %>
 </ul>
+<h3>
 
-<%= form_tag new_event_path, method: :get do %>
- <%= submit_tag "Create Historical Event" %>
-<% end %>
-<br>
-
-<%= form_tag edit_historical_moment_path, method: :get do %>
-<%= submit_tag "Update Historical Moment" %>
-<% end %> <br>
-<%= form_tag historical_moment_path(@historicalMoment), method: :delete do %>
- <%= submit_tag "Delete Historical Moment", data: { confirm: 'Are you sure?' } %>
-<% end %>
-
+<%= link_to "Create Event", new_event_path %>
+|| 
+<%= link_to "Create Actor", new_actor_path %>
+|| 
+<%= link_to "Edit Historical Moment",  edit_historical_moment_path(@historicalMoment) %>
+||
+<%= link_to "Delete Historical Moment", historical_moment_path(@historicalMoment), method: :delete, data: { confirm: 'Are you sure?' }  %> </h3>
