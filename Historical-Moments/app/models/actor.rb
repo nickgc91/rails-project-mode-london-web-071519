@@ -15,6 +15,7 @@ class Actor < ApplicationRecord
         end
     end
 
+
     # COULDN'T GET BIO METHOD TO WORK -->
     # #longest bio
     # def self.actor_with_longest_bio
@@ -37,5 +38,6 @@ class Actor < ApplicationRecord
         end
     end
    
+
 
 end

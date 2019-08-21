@@ -4,11 +4,23 @@
    <li> <%= link_to actor.name, actor_path(actor) %> </li>
     <% end %> <br>
     <p> The actor who participated in the most events is <%= link_to @most_events.name, actor_path(@most_events) %>, who participated in <%= @most_events.events.count %> events. <p> 
-<br> 
 <h3> <%= @total_moments %> Moments: </h3>
 <% @moments.each do |moment| %>
     <li> <%= link_to moment.name, historical_moment_path(moment) %> </li>
      <% end %> <br>
 <p> The Historical Moment with the most events is <%= link_to @hm_most_events.name, historical_moment_path(@hm_most_events) %>, with <%= @hm_most_events.events.count %> events. <p> 
 <p> The Historical Moment with the most actors is <%= link_to @hm_most_actors.name, historical_moment_path(@hm_most_actors) %>, with <%= @hm_most_events.actors.count %> actors. <p>
+<p> The Historical Moment with the most events and actors both is <%= link_to @most_events_actors.name, historical_moment_path(@most_events_actors) %>, with <%= @most_events_actors.actors.count %> actors and <%= @most_events_actors.events.count %> events. </p>
 <p> The Historical Moment with the most documents is <%= link_to @hm_most_docs.name, historical_moment_path(@hm_most_docs) %>, with <%= @hm_most_docs.documents.count %> documents. <p>
+<p> The earliest Historical Moment is <%= link_to @earliest.name, historical_moment_path(@earliest) %>, which began in <%= @earliest.start_date.year %>. <p>
+<p> The most recent Historical Moment is <%= link_to @recent.name, historical_moment_path(@recent) %>, which began in <%= @recent.start_date.year %>. <p>
+
+<h3> <%= @total_events %> Events: </h3>
+<% @events.each do |event| %>
+    <li> <%= link_to event.name, event_path(event) %> </li>
+     <% end %> <br>
+
+<p> The event with the most actors is <%= link_to @event_most_actors.name, event_path(@event_most_actors) %>, with <%= @event_most_actors.actors.count %> actors. <p>
+<p> The earliest event is <%= link_to @earliest_event.name, event_path(@earliest_event) %>, which occured in <%= @earliest_event.event_date.year %>. <p>
+<p> The most recent event is <%= link_to @most_recent_event.name, event_path(@most_recent_event) %>, which occured in <%= @most_recent_event.event_date.year %>. <p>
+
