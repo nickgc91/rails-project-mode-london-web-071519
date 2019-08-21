@@ -10,7 +10,7 @@ Title: <%= @actor.title %> <br> <br>
 <% @actor.events.each do |event| %> 
     Participated In: <%= link_to event.name, event_path(event) %> <br>
     <% end %><br> 
-    <%= link_to "Edit", edit_actor_path(@actor)%> || <%= link_to "Add Event", new_location_path %> ||
+    <%= link_to "Edit", edit_actor_path(@actor)%> || <%= link_to "Connect Me To A Historical Event", new_location_path %> ||
 <%= link_to "Delete", actor_path(@actor), method: :delete, data: { confirm: 'Are you sure?' } %> || <%= link_to "All Actors", actors_path%> || 
 </h3>
 
