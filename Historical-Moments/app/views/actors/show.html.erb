@@ -7,7 +7,7 @@ Title: <%= @actor.title %> <br>
     Participated In: <%= link_to event.name, event_path(event) %> <br>
     <% end %><br> 
     <%= link_to "Edit", edit_actor_path(@actor)%> || <%= link_to "Add Event", new_location_path %> ||
-<%= link_to "Delete", actor_path(@actor), method: :delete %> </h3>
+<%= link_to "Delete", actor_path(@actor), method: :delete, data: { confirm: 'Are you sure?' } %> || <%= link_to "All Actors", actors_path%> || 
 </h3>
 
     <img src= <%= @actor.img_url %> >
