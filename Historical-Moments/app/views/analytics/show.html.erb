@@ -3,4 +3,12 @@
 <% @actors.each do |actor| %>
    <li> <%= link_to actor.name, actor_path(actor) %> </li>
     <% end %> <br>
-    <p> The actor with the most events is <%= link_to @most_events.name, actor_path(@most_events) %>, who has <%= @most_events.events.count %> events. <p> 
+    <p> The actor who participated in the most events is <%= link_to @most_events.name, actor_path(@most_events) %>, who participated in <%= @most_events.events.count %> events. <p> 
+<br> 
+<h3> <%= @total_moments %> Moments: </h3>
+<% @moments.each do |moment| %>
+    <li> <%= link_to moment.name, historical_moment_path(moment) %> </li>
+     <% end %> <br>
+<p> The Historical Moment with the most events is <%= link_to @hm_most_events.name, historical_moment_path(@hm_most_events) %>, with <%= @hm_most_events.events.count %> events. <p> 
+<p> The Historical Moment with the most actors is <%= link_to @hm_most_actors.name, historical_moment_path(@hm_most_actors) %>, with <%= @hm_most_events.actors.count %> actors. <p>
+<p> The Historical Moment with the most documents is <%= link_to @hm_most_docs.name, historical_moment_path(@hm_most_docs) %>, with <%= @hm_most_docs.documents.count %> documents. <p>
