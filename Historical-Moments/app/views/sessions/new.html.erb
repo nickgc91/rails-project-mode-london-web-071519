@@ -17,6 +17,7 @@
     <%= password_field :user, :password %>
     <%= submit_tag(value="Login") %>
 <% end %> <br>
+
 <h3> Or Create New User --> </h3>
 <%= form_tag new_user_path, method: :get do %>
  <%= submit_tag "Create New User" %>
