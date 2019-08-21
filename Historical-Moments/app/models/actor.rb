@@ -3,14 +3,6 @@ class Actor < ApplicationRecord
     has_many :events, through: :locations
 
 
-    def Actor.does_this_work
-        @actors = Actor.all
-    end 
-
-
-    #analytics methods for Actor
-
-    #provides the total amount of actors
     def self.total_actors
         Actor.all.count
     end
