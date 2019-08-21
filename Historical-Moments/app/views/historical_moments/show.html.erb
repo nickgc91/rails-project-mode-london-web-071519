@@ -30,3 +30,5 @@
 <%= link_to "Edit Historical Moment",  edit_historical_moment_path(@historicalMoment) %>
 ||
 <%= link_to "Delete Historical Moment", historical_moment_path(@historicalMoment), method: :delete, data: { confirm: 'Are you sure?' }  %> </h3>
+<br>
+<img src= <%=@historicalMoment.img_url %> alt="">
