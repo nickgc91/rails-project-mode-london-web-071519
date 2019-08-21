@@ -15,20 +15,5 @@ class Actor < ApplicationRecord
         end
     end
 
-    #earlierst occuring start date of moment
-    def self.earliest_occuring_moment
-        moment = HistoricalMoment.all.min_by do |moment|
-            moment.start_date
-        end
-    end
-
-    #most recent event
-    def self.most_recent_moment
-        event = Moment.all.max_by do |moment|
-            moment.start_date
-        end
-    end
-
-   
 
 end
