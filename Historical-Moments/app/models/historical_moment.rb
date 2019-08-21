@@ -34,7 +34,22 @@ class HistoricalMoment < ApplicationRecord
     #moment with the most documents
     def self.most_documents
         moment = HistoricalMoment.all.max_by do |moment|
-            moment.document.count 
+            moment.documents.count 
+        end
+    end
+
+
+    #earlierst occuring moment
+    def self.earliest_occuring_moment
+        moment = HistoricalMoment.all.min_by do |moment|
+            moment.start_date
+        end
+    end
+
+    #most recent moment
+    def self.most_recent_moment
+        moment = HistoricalMoment.all.max_by do |moment|
+            moment.start_date
         end
     end
 
