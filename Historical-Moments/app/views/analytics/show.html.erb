@@ -4,7 +4,9 @@
    <li> <%= link_to actor.name, actor_path(actor) %> </li>
     <% end %> <br>
     <p> The actor who participated in the most events is <%= link_to @most_events.name, actor_path(@most_events) %>, who participated in <%= @most_events.events.count %> events. <p> 
-<h3> <%= @total_moments %> Moments: </h3>
+    <p> The actor with the longest life was <%= link_to @longest_life.name, actor_path(@longest_life) %>, who lived <%= @longest_life.death_date.year - @longest_life.birth_date.year %> years. <p> 
+    <p> The actor with the shortest life was <%= link_to @shortest_life.name, actor_path(@shortest_life) %>, who lived <%= @shortest_life.death_date.year - @shortest_life.birth_date.year %> years. <p> 
+    <h3> <%= @total_moments %> Moments: </h3>
 <% @moments.each do |moment| %>
     <li> <%= link_to moment.name, historical_moment_path(moment) %> </li>
      <% end %> <br>

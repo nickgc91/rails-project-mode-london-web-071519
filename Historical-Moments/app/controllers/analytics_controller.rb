@@ -4,6 +4,8 @@ class AnalyticsController < ApplicationController
         @actors = Actor.all
         @all_actors = Actor.total_actors
         @most_events = Actor.actor_with_most_events
+        @longest_life = Actor.actor_with_longest_life
+        @shortest_life = Actor.actor_with_shortest_life
         ####### moments 
         @moments = HistoricalMoment.all
         @total_moments = HistoricalMoment.total_moments
