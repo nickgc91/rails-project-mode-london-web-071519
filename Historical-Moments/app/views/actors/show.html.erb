@@ -2,7 +2,11 @@
 <h3>Date of Birth: <%= @actor.birth_date %> <br>
 Date of Death: <%= @actor.death_date %> <br>
 Bio: <%= @actor.bio %> <br>
-Title: <%= @actor.title %> <br>
+Title: <%= @actor.title %> <br> <br>
+
+<% if !(Location.find_by(actor_id: @actor.id)) %>
+<p> <font color="red" > Remember to <%= link_to "add an event", new_location_path %> to this actor </font></p>
+<%end%>
 <% @actor.events.each do |event| %> 
     Participated In: <%= link_to event.name, event_path(event) %> <br>
     <% end %><br> 

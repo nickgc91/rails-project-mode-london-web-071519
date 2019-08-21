@@ -12,7 +12,7 @@ class Actor < ApplicationRecord
     def self.actor_with_most_events
         Actor.all.max_by do |actor|
             actor.events.count
-        end
+        end 
     end
 
 
