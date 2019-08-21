@@ -10,9 +10,7 @@
 <% end %>  
 </ul>
 
-<%= form_tag new_actor_path, method: :get do %>
-<%= submit_tag "Add Actor" %>
-<% end %>
+<%= link_to "Add Actor to Event", "/locations/:event_id", method: :get  %>
 <br>
 
 <img src= <%=@event.img_url %> alt="">

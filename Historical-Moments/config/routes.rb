@@ -51,6 +51,11 @@ Rails.application.routes.draw do
 
    #locations
    get "/locations/new", to: "locations#new", as: "new_location"
-   post "/locations/", to: "locations#create"
+   get "/locations/:event_id", to: "locations#eventid", as: "location"
+   post "/locations/:event_id/create", to: "locatoins#create_by_id" 
+   post "/locations", to: "locations#create"
+  
+   ###
+   get "/analytics", to: "analytics#show", as: "analytics"
 
 end
