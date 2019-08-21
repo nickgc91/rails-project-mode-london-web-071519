@@ -16,8 +16,8 @@ description1 = "World War II, also known as the Second World War, was a global w
 event1 = Event.create(name: "Pearl Harbor", description: description1, img_url: "https://cdn.britannica.com/s:500x350/19/192919-049-61E0CA86.jpg", event_date: date_of_event1, historical_moment_id: historicalMoment1.id)
 
 #actors
-actor1_birth_year = Date.new(1941, 12, 7)
-actor1_death_year = Date.new(1921, 12, 7)
+actor1_birth_year = Date.new(1921, 12, 7)
+actor1_death_year = Date.new(1941, 12, 7)
 bio1 = "Instances of kamikaze pilots were seen as early as the December 7, 1941 attack on Pearl Harbor. Though the suicide pilots of Japan were only organized into specific units later in the war, the concept of the kamikaze attack was a reflection of the Japanese idea that it was better to be killed in battle than captured."
 actor1 = Actor.create(name: "Japaneze Kamikaze Pilots", birth_date: actor1_birth_year, death_date: actor1_death_year, bio: bio1, img_url: "http://attackofpearlharbour.weebly.com/uploads/5/7/9/9/5799836/4363123_orig.jpg?1359741438", title: "Airforce Pilot")
 
