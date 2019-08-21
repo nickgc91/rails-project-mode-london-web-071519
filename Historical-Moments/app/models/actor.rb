@@ -2,7 +2,7 @@ class Actor < ApplicationRecord
     has_many :locations 
     has_many :events, through: :locations
 
-
+    #
     #provides the total amount of actors
     def self.total_actors
         Actor.all.count
