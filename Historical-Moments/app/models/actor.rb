@@ -6,4 +6,15 @@ class Actor < ApplicationRecord
         @actors = Actor.all
     end 
 
+    #analytics methods for Actor
+    def self.total_actors
+        Actor.all.count
+    end
+
+    def self.actor_with_most_events
+        Actor.all.max_by do |actor|
+            actor.events.count
+        end
+    end
+
 end
