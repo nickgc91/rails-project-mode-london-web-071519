@@ -13,7 +13,7 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect_to historical_moments_path
         else
-            render :new
+            render template: "users/new", layout: false
         end
     end
 
