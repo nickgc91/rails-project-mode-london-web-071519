@@ -17,12 +17,16 @@ class Actor < ApplicationRecord
 
 
     # COULDN'T GET BIO METHOD TO WORK -->
-    # #longest bio
-    # def self.actor_with_longest_bio
-    #     Actor.all.max_by do |actor|
-    #         actor.bio.length
-    #     end
-    # end
+    #longest bio
+    def self.actor_with_longest_bio
+        Actor.all.max_by do |actor|
+            if actor.bio
+                actor.bio.length
+            else
+                0
+            end
+        end
+    end
 
     #longest life
     def self.actor_with_longest_life
@@ -37,7 +41,6 @@ class Actor < ApplicationRecord
             actor.death_date.year - actor.birth_date.year
         end
     end
-   
 
 
 end
