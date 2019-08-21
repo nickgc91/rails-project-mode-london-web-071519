@@ -53,6 +53,7 @@ class HistoricalMoment < ApplicationRecord
         end
     end
 
+    
 
  
 
