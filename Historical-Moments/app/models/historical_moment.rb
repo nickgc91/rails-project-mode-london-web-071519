@@ -39,6 +39,21 @@ class HistoricalMoment < ApplicationRecord
     end
 
 
+    #earlierst occuring moment
+    def self.earliest_occuring_moment
+        moment = HistoricalMoment.all.min_by do |moment|
+            moment.start_date
+        end
+    end
+
+    #most recent moment
+    def self.most_recent_moment
+        moment = HistoricalMoment.all.max_by do |moment|
+            moment.start_date
+        end
+    end
+
+
  
 
 
