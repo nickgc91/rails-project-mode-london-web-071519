@@ -38,7 +38,7 @@ class HistoricalMomentsController < ApplicationController
     private 
 
     def historical_moment_params
-        params.require(:historical_moment).permit(:name, :start_date, :end_date)
+        params.require(:historical_moment).permit(:name, :start_date, :end_date, :img_url)
     end
 
 end
